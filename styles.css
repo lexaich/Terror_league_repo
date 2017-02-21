@@ -1,0 +1,112 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	color:white;
+	font-size: 30px;
+}
+
+.contents:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.contents { display: inline-block; }
+/* start commented backslash hack \*/
+* html .contents { height: 1%; }
+.contents { display: block; }
+/* close commented backslash hack */
+#header{
+	margin-bottom:10px;
+	border:3px solid black;
+}
+
+.inner-header{
+	background-color:;
+	height:200px;
+	margin: 10px 10px 10px 10px;
+}
+
+#logo{
+	float:left;
+}
+/*  меню */
+#nav,#nav li {
+	margin:0;
+	padding:0;
+}
+
+#nav {
+	text-align:center;
+	
+	width:;
+	border-radius: 10px;
+	
+ }
+#nav li{
+	display:inline-block;
+}
+#nav a{
+	background:#292929;
+	display: block;
+	text-decoration:none;
+	color:#fff;
+	padding:7px 15px;
+	border-radius: 10px 10px 10px 10px;
+	width: 200px;
+	height:80px;
+	text-align:center;
+
+}
+#nav a:hover {
+	background: #404040;
+
+}
+
+/**************************/
+
+.midside{
+	width:70%;
+	float:left;
+	border:3px solid black;
+}
+
+.inner-content{
+	min-height:200px;
+	background-color: #2f3c66;
+	margin: 10px 10px 10px 10px;
+}
+
+.rightside{
+	width:30%;
+	float:left;
+	border:3px solid black;
+}
+
+.inner-sidebar{
+
+	min-height:100px;
+	margin: 10px 10px 10px 10px;
+}
+.tornament{
+	background-color: #000;
+	width:200px;
+	height:100px;
+}
+.tornaments{
+	float:left;
+}
+
+#footer{
+	margin-top:10px;
+	border:3px solid black;
+}
+
+.inner-footer{
+	background-color: #3d3c66;
+	height:200px;
+	margin: 10px 10px 10px 10px;
+}
