@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 	header('Content-type: text/html; charset=utf-8');
 	require "php/dbdata.php";
@@ -34,7 +34,20 @@
 		<div id="header">
 			<div class="inner-header">
 <img id="logo" src="#" alt="лого">
-<nav style="float:left">
+<div id="searchform">
+	<div class="links">
+		<a href="#"><img src="#" alt="VK"></a>
+		<a href="#"><img src="#" alt="TWITCH"></a>
+		<a href="#"><img src="#" alt="YOUTUBE"></a>
+		<a href="#"><img src="#" alt="TWITTER"></a>
+	</div>
+	<div class="search">
+	<form action="#" id="search">
+		<input type="text" placeholder="Поиск...">
+	</form>
+	</div>
+</div>
+<nav class="nav">
 	<ul id="nav">
 		<li><a href="#">menu 1</a></li>
 		<li><a href="#">menu 2</a></li> 
@@ -45,6 +58,11 @@
 </nav>
 			</div>
 		</div>
+
+<div id="banner">
+	<img src="#" alt="большой большой баннер турнира">
+</div>
+
 		<div class="contents">
 			<div class="midside">
 				<?php
@@ -56,8 +74,8 @@
 							<div class="photo"><img src='<?php echo $news_array[$i]['newsPhoto']; ?>' alt="фотошо новости">
 							</div>
 							<div class="news-title"><?php echo $news_array[$i]['newsTitle']; ?></div>
-							<div class="description"><?php echo $news_array[$i]['newsDescription']; ?>
-							</div>
+							<div class="description"><?php echo $news_array[$i]['newsDescription']; ?></div>
+							<a href="#">Читать далее...</a>
 						</div>
 					<?php
 				}
@@ -65,29 +83,47 @@
 				?>
 			</div>
 			<div class="rightside">
-				<div class="tornaments">
+				
 					<div class="inner-sidebar">
 						<div class="tornament"><?php echo 'Русские буквы сука!'?></div>
 					</div>
 					<div class="inner-sidebar">
-						<div class="tornament">s</div>
+						<div class="tornament">
+							<img src="#" alt="Лого1">
+							<img src="#" alt="Крестик">
+							<img src="#" alt="Лого2">
+						</div>
 					</div>
 					<div class="inner-sidebar">
-						<div class="tornament">s</div>
+						<div class="tornament">
+							<img src="#" alt="Лого1">
+							<img src="#" alt="Крестик">
+							<img src="#" alt="Лого2">
+						</div>
 					</div>
 					<div class="inner-sidebar">
-						<div class="tornament">s</div>
+						<div class="tornament">
+						<img src="#" alt="Лого1">
+							<img src="#" alt="Крестик">
+							<img src="#" alt="Лого2">
+							</div>
 					</div>
 					<div class="inner-sidebar">
-						<div class="tornament">s</div>
+						<div class="tornament">
+							<img src="#" alt="Лого1">
+							<img src="#" alt="Крестик">
+							<img src="#" alt="Лого2">
+						</div>
 					</div>
-				</div>
+				
 
 
 			</div>
 		</div>
 		<div id="footer">
-			<div class="inner-footer">footer</div>
+			<div class="inner-footer">
+				<div>copyright</div>
+			</div>
 		</div>
 
 	</div>
