@@ -4,14 +4,14 @@
 	padding:0;
 }
 body{
-	color:black;
-	font-size: 30px;
+color:black;
+font-size: 20px;
 background-color: #F5F5F5;
 }
 
 .wrapper{
-	max-width:1600px;
-
+max-width:1200px;
+margin:0 auto;
 }
 
 
@@ -30,7 +30,8 @@ background-color: #F5F5F5;
 /* close commented backslash hack */
 #header{
 	margin-bottom:10px;
-	border:3px solid black;
+	/*border:3px solid black;*/
+	width:100%;
 }
 
 
@@ -43,11 +44,12 @@ background-color: #F5F5F5;
 #logo{
 	
 	width: 500px;
-	height: 200px;
+	height: 150px;
 }
 
 #searchform{ /* форма с ссылками и поиском */
 float:right;
+margin-top: 30px;
 }
 .links{
 
@@ -72,6 +74,7 @@ background: url("http://1.bp.blogspot.com/_hljKDuw-cxQ/SDEJPIeJG2I/AAAAAAAAGaM/N
 	border-radius: 15px;
 }
 #nav {
+ height: 50px;
 	border-radius: 10px;
 	
  }
@@ -81,15 +84,14 @@ background: url("http://1.bp.blogspot.com/_hljKDuw-cxQ/SDEJPIeJG2I/AAAAAAAAGaM/N
 }
 #nav a{
 	background:#292929;
+	    height: 50px;
 	display: block;
 	text-decoration:none;
 	color:#fff;
-	padding:7px 15px;
 	border-radius: 10px 10px 10px 10px;
-	width: 200px;
-
-
-
+	width: 150px;
+	padding-top: 6%;
+	font-weight: bold
 }
 #nav a:hover {
 	background: #CCCCCC;
@@ -101,71 +103,114 @@ background: url("http://1.bp.blogspot.com/_hljKDuw-cxQ/SDEJPIeJG2I/AAAAAAAAGaM/N
 #banner>img{
 	width:100%;
 	height:200px;
-	margin: 0 0 10px 0;
+	margin: 0 0 20px 0;
 }
-
+/* основной контент */
 .midside{
-	width:70%;
+	width:74%;
 	float:left;
-	border:3px solid black;
+	/*border:3px solid black;*/
+
+	background-color: #000;
+	border-radius: 10px;
+}
+.title{
+	font-size:30px;
+	font-weight: bold;
+	text-align: center;
+	color:#fff;
+	padding:10px 0 10px 0;
 }
 
 .inner-content{ /*блока с новостями*/
 	min-height:250px;
-	
+	background-color: #FCFFE9;
 	margin: 10px 10px 10px 10px;
 }
-.photo{
+.photo{/*стиль фото в новостях*/
 	margin-right:20px;
 	float:left;
 	padding:10px;
-	border:1px solid;
-	border-radius: 10px;
-}
-.photo>img{  /*стиль фото в новостях*/
+
 	
-	width:400px;
-	height:200px;
+}
+.photo>img{  
+	
+	width:350px;
+	max-height:200px;
+	border-radius: 10px;
 	
 }
 .news-title{
-
+font-size: 25px;
+margin:10px 0 10px 0;
 }
 .description{
 font-size:20px;
+margin-bottom:10px;
 }
 .inner-content>a{
 color:#ff0000;
 	text-decoration:none;
+
 }
 .inner-content>a:hover{
 color:#4B924B;
 }
 
 .rightside{
-	width:30%;
-	float:left;
-	border:3px solid black;
+	font-size:15px;
+	width:25%;
+	float:right;
+	/*border:3px solid black;*/
+		background-color: #000;
+	border-radius: 10px;
+	
 }
 
-.inner-sidebar{ /* контент внутри правого блока*/
+.inner-rightside{ /* контент внутри правого блока*/
+background-color: #FCFFE9;
 
-
-	margin: 20px 10px 10px 10px;
+	margin: 10px 10px 10px 10px;
 }
 .tornament{ /* турнир */
-	border:1px solid;
-	
-	
-}
 
+	margin: 10px 10px 10px 10px;
+
+		
+}
+.tornament>img{
+max-width: 50px;
+max-height: 50px;
+border-radius: 30px;
+}
+img[alt="cross"]{
+	max-width: 20px;
+max-height: 20px;
+margin: 0 17px 15px 17px;
+}
 
 #footer{
 	margin-top:10px;
-	border:3px solid black;
+	/*border:3px solid black;*/
+	background-color: #fff;
 }
 
 .inner-footer{ /* контент внутри футера*/
 	margin: 10px 10px 10px 10px;
 	text-align:center;
+}
+/* медиа запросы*/
+@media only (max-device-width: 1024px) {
+
+#nav a{
+	background:#292929;
+	    height: 50px;
+	display: block;
+	text-decoration:none;
+	color:#fff;
+	border-radius: 10px 10px 10px 10px;
+	width: 100px;
+	padding-top: 6%;
+	font-weight: bold
 }

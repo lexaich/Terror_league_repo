@@ -1,8 +1,6 @@
 <?php
-
 	header('Content-type: text/html; charset=utf-8');
 	require "php/dbdata.php";
-
 	@ $dbconnect = new mysqli($dbDataUser->host, $dbDataUser->login, $dbDataUser->password, $dbDataUser->database);
 	if(mysqli_connect_errno()){
 		echo "<p class='no-connect-db'>Не удалось подлючиться к базе данных. Повторите попытку позже.</p>".$dbDataUser->login.$dbDataUser->password;
@@ -19,7 +17,6 @@
 			array_push($news_array, $row);
 		}
 	}
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,13 +30,13 @@
 
 		<div id="header">
 			<div class="inner-header">
-<img id="logo" src="#" alt="лого">
+<img id="logo" src="/images/logo.png" alt="лого">
 <div id="searchform">
 	<div class="links">
-		<a href="#"><img src="#" alt="VK"></a>
-		<a href="#"><img src="#" alt="TWITCH"></a>
-		<a href="#"><img src="#" alt="YOUTUBE"></a>
-		<a href="#"><img src="#" alt="TWITTER"></a>
+		<a href="#"><img src="/images/vk.jpg" alt="VK"></a>
+		<a href="#"><img src="/images/twitch.jpg" alt="TWITCH"></a>
+		<a href="#"><img src="/images/youtube.jpg" alt="YOUTUBE"></a>
+		<a href="#"><img src="/images/twitter.jpg" alt="TWITTER"></a>
 	</div>
 	<div class="search">
 	<form action="#" id="search">
@@ -49,24 +46,26 @@
 </div>
 <nav class="nav">
 	<ul id="nav">
-		<li><a href="#">menu 1</a></li>
-		<li><a href="#">menu 2</a></li> 
-		<li><a href="#">menu 3</a></li>
-		<li><a href="#">menu 4</a></li>
-		<li><a href="#">menu 5</a></li>
+		<li><a href="#">Главная</a></li>
+		<li><a href="#">Лига</a></li> 
+		<li><a href="#">Стримы</a></li>
+		<li><a href="#">Новости</a></li>
+		<li><a href="#">Турниры</a></li>
+		<li><a href="#">Команды</a></li>
+		<li><a href="#">Медиа</a></li>
 	</ul>
 </nav>
 			</div>
 		</div>
 
 <div id="banner">
-	<img src="#" alt="большой большой баннер турнира">
+	<img src="/images/banner.jpg" alt="большой большой баннер турнира">
 </div>
 
 		<div class="contents">
 			<div class="midside">
+			<p class="title">Новости лиги</p>
 				<?php
-
 					for($i = 0; $i < count($news_array); $i++){
 						?>
 						<div class="inner-content">
@@ -79,40 +78,44 @@
 						</div>
 					<?php
 				}
-
 				?>
 			</div>
 			<div class="rightside">
-				
-					<div class="inner-sidebar">
-						<div class="tornament"><?php echo 'Русские буквы сука!'?></div>
-					</div>
-					<div class="inner-sidebar">
-						<div class="tornament">
-							<img src="#" alt="Лого1">
-							<img src="#" alt="Крестик">
-							<img src="#" alt="Лого2">
-						</div>
-					</div>
-					<div class="inner-sidebar">
-						<div class="tornament">
-							<img src="#" alt="Лого1">
-							<img src="#" alt="Крестик">
-							<img src="#" alt="Лого2">
-						</div>
-					</div>
-					<div class="inner-sidebar">
-						<div class="tornament">
-						<img src="#" alt="Лого1">
-							<img src="#" alt="Крестик">
-							<img src="#" alt="Лого2">
+			<p class="title">Турниры</p>
+					<div class="inner-rightside">
+						<div class="tornaments">
+
+							<div class="tornament">
+								<img src="/images/teams/vp.png" alt="Лого1">
+								<img src="/images/teams/X.bmp" alt="cross">
+								<img src="/images/teams/Meteor.png" alt="Лого2">
 							</div>
-					</div>
-					<div class="inner-sidebar">
-						<div class="tornament">
-							<img src="#" alt="Лого1">
-							<img src="#" alt="Крестик">
-							<img src="#" alt="Лого2">
+							<div class="tornament">
+								<img src="/images/teams/Meteor.png" alt="Лого1">
+								<img src="/images/teams/X.bmp" alt="cross">
+								<img src="/images/teams/vp.png" alt="Лого2">
+							</div>
+							<div class="tornament">
+								<img src="/images/teams/vp.png" alt="Лого1">
+								<img src="/images/teams/X.bmp" alt="cross">
+								<img src="/images/teams/Meteor.png" alt="Лого2">
+							</div>
+							<div class="tornament">
+								<img src="/images/teams/Meteor.png" alt="Лого1">
+								<img src="/images/teams/X.bmp" alt="cross">
+								<img src="/images/teams/vp.png" alt="Лого2">
+							</div>
+							<div class="tornament">
+								<img src="/images/teams/vp.png" alt="Лого1">
+								<img src="/images/teams/X.bmp" alt="cross">
+								<img src="/images/teams/Meteor.png" alt="Лого2">
+							</div>
+							<div class="tornament">
+								<img src="/images/teams/Meteor.png" alt="Лого1">
+								<img src="/images/teams/X.bmp" alt="cross">
+								<img src="/images/teams/vp.png" alt="Лого2">
+							</div>
+
 						</div>
 					</div>
 				

@@ -12,6 +12,6 @@
     $dbDataUser->host = 'localhost';
     $dbDataUser->login = 'user';
     $dbDataUser->password = '';
-    $dbDataUser->database = 'terror_league';
+    $dbDataUser->database = 'terror_legue';
 
 ?>
