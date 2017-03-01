@@ -9,11 +9,295 @@ font-size: 20px;
 background-color: #F5F5F5;
 }
 
+/****************** форма входа ****************/
+.login-form{
+	position:relative;
+    left: 200px;
+float:left;
+    bottom: 1800px;
+    display:none;
+}
+.form-login {
+    font-family: 'Ubuntu', 'Lato', sans-serif;
+    font-weight: 400;
+    width: 300px;
+    position: relative;
+    margin: 60px auto 30px;
+    padding: 10px;
+    overflow: hidden;
+    background: #111;
+    border-radius: 0.4em;
+    border: 1px solid #191919;
+    box-shadow:
+        inset 0 0 2px 1px rgba(255,255,255,0.08),
+        0 16px 10px -8px rgba(0, 0, 0, 0.6);
+}
+.form-login label {
+    width: 50%;
+    float: left;
+    padding-top: 9px;
+    color: #ddd;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 1px 0 #000;
+    text-indent: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+ .form-login input[type=text],
+.form-login input[type=password] {
+    width: 50%;
+    float: left;
+    padding: 8px 5px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    background: linear-gradient(#1f2124, #27292c);   
+    border: 1px solid #000;
+    box-shadow:
+    0 1px 0 rgba(255,255,255,0.1);
+    border-radius: 3px;
+    font-family: 'Ubuntu', 'Lato', sans-serif;
+    color: #fff;
+ }
+ .form-login input[type=text]:hover,
+.form-login input[type=password]:hover,
+.form-login label:hover ~ input[type=text],
+.form-login label:hover ~ input[type=password] {
+    background: #27292c;
+}
+ .form-login input[type=text]:focus,
+.form-login input[type=password]:focus {
+    box-shadow: inset 0 0 2px #000;
+    background: #494d54;
+    border-color: #51cbee;
+    outline: none;
+}
+.form-login p:nth-child(3),
+.form-login p:nth-child(4) {
+    float: left;
+    width: 50%;
+}
+.form-login label[for=remember] {
+    width: auto;
+    float: none;
+    display: inline-block;
+    text-transform: capitalize;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    text-indent: 2px;
+}
+ .form-login input[type=checkbox] {
+    margin-left: 10px;
+    vertical-align: middle;
+}
+.form-login input[type=submit] {
+    width: 100%;
+    padding: 8px 5px;
+    border: 1px solid #0273dd;
+    border: 1px solid rgba(0,0,0,0.4);
+    box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.3),
+    inset 0 10px 10px rgba(255,255,255,0.1);
+    border-radius: 3px;
+    background: #22465F;
+    cursor:pointer;
+    font-family: 'Ubuntu', 'Lato', sans-serif;
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.8);
+}
+ .form-login input[type=submit]:hover {
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+}
+ .form-login input[type=submit]:active {
+    background: #287db5;
+    box-shadow: inset 0 0 3px rgba(0,0,0,0.6);
+    border-color: #000; /* Fallback */
+    border-color: rgba(0,0,0,0.9);
+}
+ .no-boxshadow .form-login input[type=submit]:hover {
+    background: #2a92d8;
+}
+.form-login:after {
+    content: "";
+    height: 1px;
+    width: 33%;
+    position: absolute;
+    left: 20%;
+    top: 0;
+    background: linear-gradient(left, transparent, #444, #b6b6b8, #444, transparent);
+}
+.form-login:before {
+    content: "";
+    width: 8px;
+    height: 5px;
+    position: absolute;
+    left: 34%;
+    top: -7px;
+    border-radius: 50%;
+    box-shadow: 0 0 6px 4px #fff;
+}
+.form-login p:nth-child(1):before{
+    content: "";
+    width: 250px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 45px;
+    transform: rotate(75deg);
+    background: linear-gradient(50deg, rgba(255,255,255,0.15), rgba(0,0,0,0));
+    pointer-events: none;
+}
+.no-pointerevents .form-login p:nth-child(1):before {
+    display: none;
+}
+
+/* форма регистрации*/
+.register-form{
+	position:relative;
+    right: 150px;
+
+    bottom: 1800px;
+    display:none;
+}
+.form-register {
+    font-family: 'Ubuntu', 'Lato', sans-serif;
+    font-weight: 400;
+    width: 300px;
+    position: relative;
+    margin: 60px auto 30px;
+    padding: 10px;
+    overflow: hidden;
+    background: #111;
+    border-radius: 0.4em;
+    border: 1px solid #191919;
+    box-shadow:
+        inset 0 0 2px 1px rgba(255,255,255,0.08),
+        0 16px 10px -8px rgba(0, 0, 0, 0.6);
+}
+.form-register label {
+    width: 50%;
+    float: left;
+    padding-top: 9px;
+    color: #ddd;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 1px 0 #000;
+    text-indent: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+ .form-register input[type=text],
+.form-register input[type=password] {
+    width: 50%;
+    float: left;
+    padding: 8px 5px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    background: linear-gradient(#1f2124, #27292c);   
+    border: 1px solid #000;
+    box-shadow:
+    0 1px 0 rgba(255,255,255,0.1);
+    border-radius: 3px;
+    font-family: 'Ubuntu', 'Lato', sans-serif;
+    color: #fff;
+ }
+ .form-register input[type=text]:hover,
+.form-register input[type=password]:hover,
+.form-register label:hover ~ input[type=text],
+.form-register label:hover ~ input[type=password] {
+    background: #27292c;
+}
+ .form-register input[type=text]:focus,
+.form-register input[type=password]:focus {
+    box-shadow: inset 0 0 2px #000;
+    background: #494d54;
+    border-color: #51cbee;
+    outline: none;
+}
+.form-register p:nth-child(3),
+.form-register p:nth-child(4),
+.form-register p:nth-child(5), {
+    float: left;
+    width: 50%;
+}
+
+.form-register input[type=submit] {
+    width: 100%;
+    padding: 8px 5px;
+    border: 1px solid #0273dd;
+    border: 1px solid rgba(0,0,0,0.4);
+    box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.3),
+    inset 0 10px 10px rgba(255,255,255,0.1);
+    border-radius: 3px;
+    background: #22465F;
+    cursor:pointer;
+    font-family: 'Ubuntu', 'Lato', sans-serif;
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.8);
+}
+ .form-register input[type=submit]:hover {
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+}
+ .form-register input[type=submit]:active {
+    background: #287db5;
+    box-shadow: inset 0 0 3px rgba(0,0,0,0.6);
+    border-color: #000; /* Fallback */
+    border-color: rgba(0,0,0,0.9);
+}
+ .no-boxshadow .form-register input[type=submit]:hover {
+    background: #2a92d8;
+}
+.form-register:after {
+    content: "";
+    height: 1px;
+    width: 33%;
+    position: absolute;
+    left: 20%;
+    top: 0;
+    background: linear-gradient(left, transparent, #444, #b6b6b8, #444, transparent);
+}
+.form-register:before {
+    content: "";
+    width: 8px;
+    height: 5px;
+    position: absolute;
+    left: 34%;
+    top: -7px;
+    border-radius: 50%;
+    box-shadow: 0 0 6px 4px #fff;
+}
+.form-register p:nth-child(1):before{
+    content: "";
+    width: 250px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 45px;
+    transform: rotate(75deg);
+    background: linear-gradient(50deg, rgba(255,255,255,0.15), rgba(0,0,0,0));
+    pointer-events: none;
+}
+.no-pointerevents .form-register p:nth-child(1):before {
+    display: none;
+}
+
+
+
+
+/*****************************************/
+
 .wrapper{
 max-width:1200px;
 margin:0 auto;
 }
-
 
 .contents:after {
      visibility: hidden;
@@ -50,6 +334,7 @@ margin:0 auto;
 #searchform{ /* форма с ссылками и поиском */
 float:right;
 margin-top: 30px;
+clear:both;
 }
 .links{
 
@@ -63,6 +348,39 @@ border: 2px solid #000;
 padding: 5px 2px 5px 36px; 
 border-radius: 10px;
 background: url("http://1.bp.blogspot.com/_hljKDuw-cxQ/SDEJPIeJG2I/AAAAAAAAGaM/N_Lu4sxLH_4/s00/lpDemoBuscador.gif") no-repeat scroll 2% 50% #000;
+}
+.btn-login {
+	margin: 15px 30px 0 0;
+	float:right;
+   position: relative;
+  display: inline-block;
+  font-size: 90%;
+  font-weight: 700;
+  color: rgb(209,209,217);
+  text-decoration: none;
+  text-shadow: 0 -1px 2px rgba(0,0,0,.2);
+  padding: .5em 1em;
+  outline: none;
+  border-radius: 20px;
+  background: linear-gradient(rgb(110,112,120), rgb(81,81,86)) rgb(110,112,120);
+  box-shadow:
+   0 1px rgba(255,255,255,.2) inset,
+   0 3px 5px rgba(0,1,6,.5),
+   0 0 1px 1px rgba(0,1,6,.2);
+  transition: .2s ease-in-out;
+}
+.btn-login:hover:not(:active) {
+	cursor:pointer;
+  background: linear-gradient(rgb(126,126,134), rgb(70,71,76)) rgb(126,126,134);
+}
+.btn-login:active {
+	cursor:pointer;
+  top: 1px;
+  background: linear-gradient(rgb(76,77,82), rgb(56,57,62)) rgb(76,77,82);
+  box-shadow:
+   0 0 1px rgba(0,0,0,.5) inset,
+   0 2px 3px rgba(0,0,0,.5) inset,
+   0 1px 1px rgba(255,255,255,.1);
 }
 
 /*  меню */
@@ -89,8 +407,8 @@ background: url("http://1.bp.blogspot.com/_hljKDuw-cxQ/SDEJPIeJG2I/AAAAAAAAGaM/N
 	text-decoration:none;
 	color:#fff;
 	border-radius: 10px 10px 10px 10px;
-	width: 150px;
-	padding-top: 6%;
+	width: 130px;
+	padding-top: 10%;
 	font-weight: bold
 }
 #nav a:hover {
@@ -124,7 +442,7 @@ background: url("http://1.bp.blogspot.com/_hljKDuw-cxQ/SDEJPIeJG2I/AAAAAAAAGaM/N
 
 .inner-content{ /*блока с новостями*/
 	min-height:250px;
-	background-color: #FCFFE9;
+	background-color: #fff;
 	margin: 10px 10px 10px 10px;
 }
 .photo{/*стиль фото в новостях*/
@@ -169,7 +487,7 @@ color:#4B924B;
 }
 
 .inner-rightside{ /* контент внутри правого блока*/
-background-color: #FCFFE9;
+background-color: #fff;
 
 	margin: 10px 10px 10px 10px;
 }

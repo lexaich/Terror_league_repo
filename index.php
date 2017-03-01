@@ -18,19 +18,36 @@
 		}
 	}
 ?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<link rel="stylesheet" href="styles.css">
 	<meta charset="UTF-8">
+	<script src="/js/jquery.js"></script>
+	<script src="/js/script.js"></script>
 	<title>Terror</title>
 </head>
 <body>
+<script>
+
+function toggleLogin(){
+$(".login-form").fadeToggle();
+}
+function toggleRegister(){
+$(".register-form").fadeToggle();
+}
+
+</script>
 	<div class="wrapper">
 
 		<div id="header">
 			<div class="inner-header">
 <img id="logo" src="/images/logo.png" alt="лого">
+
 <div id="searchform">
 	<div class="links">
 		<a href="#"><img src="/images/vk.jpg" alt="VK"></a>
@@ -44,6 +61,8 @@
 	</form>
 	</div>
 </div>
+<a onclick="toggleLogin()" class="btn-login">Войти</a>
+<a onclick="toggleRegister()" class="btn-login">Зарегистрироваться</a>
 <nav class="nav">
 	<ul id="nav">
 		<li><a href="#">Главная</a></li>
@@ -129,7 +148,53 @@
 			</div>
 		</div>
 
+<!--  формы рвхода и регистрации      -->
 	</div>
+<div class="login-form">
+  <form class="form-login" action="#">
+    <p class="clearfix">
+        <label for="login">Логин</label>
+        <input type="text" name="login" id="login" placeholder="Логин">
+    </p>
+    <p class="clearfix">
+        <label for="password">Пароль</label>
+        <input type="password" name="password" id="password" placeholder="Пароль">
+    </p>
+    <p class="clearfix">
+        <input type="checkbox" name="remember" id="remember">
+        <label for="remember">Запомнить меня</label>
+    </p>
+    <p class="clearfix">
+        <input type="submit" name="submit" value="Войти">
+    </p>      
+</form>
+</div>
+
+<div class="register-form">
+  <form class="form-register" action="#">
+    <p class="clearfix">
+        <label for="login-r">Логин</label>
+        <input type="text" name="login-r" id="login-r" placeholder="Логин">
+    </p>
+    <p class="clearfix">
+        <label for="password-r">Пароль</label>
+        <input type="password" name="password-r" id="password-r" placeholder="Пароль">
+    </p>
+
+    <p class="clearfix">
+        <label for="password-rr">Повторите Пароль</label>
+        <input type="password" name="password-rr" id="password-rr" placeholder="Повторите пароль">
+    </p>
+   <p class="clearfix">
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" placeholder="Email">
+    </p>
+    
+    <p class="clearfix">
+        <input type="submit" name="submit" value="Зарегистрироваться">
+    </p>      
+</form>
+</div>
 
 </body>
 </html>
