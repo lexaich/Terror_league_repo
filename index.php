@@ -26,22 +26,13 @@
 <html lang="en">
 <head>
 	<link rel="stylesheet" href="styles.css">
+	<link href="http://allfont.ru/allfont.css?fonts=roboto-condensed" rel="stylesheet" type="text/css" />
 	<meta charset="UTF-8">
 	<script src="/js/jquery.js"></script>
-	<script src="/js/script.js"></script>
+	<script src="/js/index.js"></script>
 	<title>Terror</title>
 </head>
 <body>
-<script>
-
-function toggleLogin(){
-$(".login-form").fadeToggle();
-}
-function toggleRegister(){
-$(".register-form").fadeToggle();
-}
-
-</script>
 	<div class="wrapper">
 
 <? include '/header.php' ;?>

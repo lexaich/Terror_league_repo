@@ -1,32 +1,68 @@
-﻿		<div id="header">
-			<div class="inner-header">
-<img id="logo" src="/images/logo.png" alt="лого">
+﻿<div id="header">
+	<div class="inner-header">
+		<img id="logo" src="/images/logo.png" alt="лого">
 
-<div id="searchform">
-	<div class="links">
-		<a href="#"><img src="/images/vk.jpg" alt="VK"></a>
-		<a href="#"><img src="/images/twitch.jpg" alt="TWITCH"></a>
-		<a href="#"><img src="/images/youtube.jpg" alt="YOUTUBE"></a>
-		<a href="#"><img src="/images/twitter.jpg" alt="TWITTER"></a>
-	</div>
-	<div class="search">
-	<form action="#" id="search">
-		<input type="text" placeholder="Поиск...">
-	</form>
-	</div>
-</div>
-<a onclick="toggleLogin()" class="btn-login">Войти</a>
-<a onclick="toggleRegister()" class="btn-login">Зарегистрироваться</a>
-<nav class="nav">
-	<ul id="nav">
-		<li><a href="#">Главная</a></li>
-		<li><a href="#">Лига</a></li> 
-		<li><a href="#">Стримы</a></li>
-		<li><a href="#">Новости</a></li>
-		<li><a href="#">Турниры</a></li>
-		<li><a href="#">Команды</a></li>
-		<li><a href="#">Медиа</a></li>
-	</ul>
-</nav>
+		<div id="searchform">
+			<div class="links">
+				<a href="#"><img src="/images/vk.jpg" alt="VK"></a>
+				<a href="#"><img src="/images/twitch.jpg" alt="TWITCH"></a>
+				<a href="#"><img src="/images/youtube.jpg" alt="YOUTUBE"></a>
+				<a href="#"><img src="/images/twitter.jpg" alt="TWITTER"></a>
+			</div>
+			<div class="search">
+			<form action="#" id="search">
+				<input type="text" placeholder="Поиск...">
+			</form>
 			</div>
 		</div>
+		<nav class="nav">
+			<ul id="nav">
+				<li><a href="#">Главная</a></li>
+				<li><a href="#">Лига</a></li> 
+				<li><a href="#">Стримы</a></li>
+				<li><a href="#">Новости</a></li>
+				<li><a href="#">Турниры</a></li>
+				<li><a href="#">Команды</a></li>
+				<li><a href="#">Медиа</a></li>
+				<li><a href="#" id='signInButton'>Войти</a></li>
+			</ul>
+		</nav>
+	</div>
+	<div class="sign-in-panel-wraper">
+		<div class="sign-in-panel" style="display: block;">
+			<img src="http://public-pc.com/wp-content/uploads/2016/03/Oshibka-pri-zapuske-prilozheniya-0xc000007b-1.png" alt="Закрыть" class='sign-in-close'>
+			<p style="text-align: center;">Авторизация</p>
+			<form action="#" class='auth-form'>
+				<p>Имя пользователя/E-mail</p>
+				<input type="text" name='userLogin'>
+				<p>Пароль</p>
+				<input type="text" name='userPassword'>
+				<input type="submit" value="Войти" id="auth-form-submit">
+				<p><a href="#">Забыли пароль?</a>/<a href="#" id="register-init">Регистрация</a></p>
+			</form>
+		</div>
+		<div class="register-panel" style="display: none">
+			<img src="http://public-pc.com/wp-content/uploads/2016/03/Oshibka-pri-zapuske-prilozheniya-0xc000007b-1.png" alt="Закрыть" class='sign-in-close'>
+			<p style="text-align: center;">Регистрация</p>
+			<form action="#" class='auth-form'>
+				<input type="text" name='userLogin' placeholder="Фамилия">
+				<input type="text" name='userLogin' placeholder="Имя">
+				<input type="text" name='userLogin' placeholder="Email">
+				<input type="text" name='userLogin' placeholder="Имя пользователя">
+				<input type="text" name='userLogin' placeholder="Пароль">
+				<input type="text" name='userLogin' placeholder="Логин Skype">
+				<input type="text" name='userLogin' placeholder="Страница Вконтакте">
+				<input type="text" name='userLogin' placeholder="Номер телефона">
+				<select name="country-select">
+					<option value="country">Выберите страну</option>
+				</select>
+				<select name="city-select">
+					<option value="city">Выберите город</option>
+				</select>
+				<p>Дата рождения</p>
+				<input type="date">
+				<input type="submit" value="Зарегистрироваться" id="auth-form-register">
+			</form>
+		</div>
+	</div>
+</div>
