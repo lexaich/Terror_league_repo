@@ -30,6 +30,7 @@
 	<meta charset="UTF-8">
 	<script src="/js/jquery.js"></script>
 	<script src="/js/index.js"></script>
+	<script src="/js/getXHR.js"></script>
 	<title>Terror</title>
 </head>
 <body>

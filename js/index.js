@@ -15,15 +15,17 @@ d.addEventListener("DOMContentLoaded", function(){
 		d.getElementsByClassName('register-panel')[0].style.display = 'block';
 	});
 	d.getElementById('auth-form-submit').addEventListener("click", function(e){
+		console.log('auth');
 		e.preventDefault();
 		var login = d.getElementsByName('userLogin')[0].value;
 		var pass = d.getElementsByName('userPassword')[0].value;
 		var data = 'login='+login+'&password='+pass+'&function='+func;
 		var url = "php/main.php";
 		var func = 'signin';
-		var query = getXHR();
-		query.open('POST',url,true);
-		query.onreadystatechange = function(){
+		var qread = getXHR();
+		qread.open('POST',url,true);
+		qread.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+		qread.onreadystatechange = function(){
 			if (this.readyState == 4 && this.status == 200){
 				if(this.responseText)
 				{var result = this.responseText;
@@ -31,6 +33,6 @@ d.addEventListener("DOMContentLoaded", function(){
 				}
 			}
 		};
-		query.send(data);
+		qread.send(data);
 	});
 });
