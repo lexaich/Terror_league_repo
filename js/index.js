@@ -19,6 +19,10 @@ d.addEventListener("DOMContentLoaded", function(){
 		e.preventDefault();
 		var login = d.getElementsByName('userLogin')[0].value;
 		var pass = d.getElementsByName('userPassword')[0].value;
+		if(!login || !password){
+			d.getElementsByClassName('error-mess')[0].innerHTML = "Заполните все поля!";
+			return 0;
+		}
 		var url = "php/main.php";
 		var func = 'signin';
 		var authoriz = getXHR();
@@ -26,9 +30,11 @@ d.addEventListener("DOMContentLoaded", function(){
 		authoriz.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 		authoriz.onreadystatechange = function(){
 			if (this.readyState == 4 && this.status == 200){
-				if(this.responseText)
-				{var result = this.responseText;
-					console.log(result);
+				if(this.responseText != '1'){
+					login = '';
+					password = '';
+					
+					d.getElementById('signInButton').innerHTML = this.responseText;
 				}
 			}
 		};
@@ -52,6 +58,10 @@ d.addEventListener("DOMContentLoaded", function(){
 				bornDate: d.getElementsByName('userBornDate')[0].value
 		}
 		var func = 'registerNewUser';
+		if(!User.surName || !User.name || !User.email || !User.login || !User.password){
+			d.getElementsByClassName('error-mess')[1].innerHTML = "Заполните все обязательные поля! Они выделены красным!";
+			return 0;
+		}
 		var registerData = "surName=" + User.surName + "&name=" + User.name + "&email=" + User.email + "&login=" + User.login + "&password=" + User.password + "&skype=" + User.skype + "&vkontakte=" + User.vkontakte + "&phone=" + User.phone + "&country=" + User.country + "&city=" + User.city + "&bornDate=" + User.bornDate + "&function=" + func;
 		var url = "php/main.php";
 		var registerUser = getXHR();

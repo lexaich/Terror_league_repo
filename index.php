@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	header('Content-type: text/html; charset=utf-8');
 	require "php/dbdata.php";
 	@ $dbconnect = new mysqli($dbDataUser->host, $dbDataUser->login, $dbDataUser->password, $dbDataUser->database);
@@ -16,6 +17,10 @@
 			$row = $result->fetch_assoc();
 			array_push($news_array, $row);
 		}
+	}
+	if($_SESSION['userLogin']){
+		$userLogin = $_SESSION['userLogin'];
+		$userid = $_SESSION['userid'];
 	}
 ?>
 
@@ -36,7 +41,7 @@
 <body>
 	<div class="wrapper">
 
-<? include '/header.php' ;?>
+<? include '/header.php';?>
 
 <div id="banner">
 	<img src="/images/banner.jpg" alt="большой большой баннер турнира">

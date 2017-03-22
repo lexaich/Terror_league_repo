@@ -20,10 +20,13 @@
 				$result = $dbconnect->query($query);
 				$numrows = $result->num_rows;
 				if($numrows){
-					echo "Вы успешно авторизованы";
+					$row = $result->fetch_assoc();
+					$_SESSION['userLogin'] = $this->login;
+					$_SESSION['id'] = $row['userid'];
+					echo $this->login;
 					exit;
 				}else{
-					echo "Не удалось авторизовать пользователя ".$query;
+					echo 1;
 					exit;
 				}
 			}

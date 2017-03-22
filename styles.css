@@ -570,6 +570,12 @@ margin: 0 17px 15px 17px;
 .register-panel input, .register-panel select{
 	margin: 5px 0;
 }
+
+.error-mess{
+	background-color: red;
+	color: white;
+	font-size: 15px;
+}
 /* медиа запросы*/
 @media only (max-device-width: 1024px) {
 
