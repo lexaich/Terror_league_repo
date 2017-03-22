@@ -45,23 +45,26 @@
 			<img src="http://public-pc.com/wp-content/uploads/2016/03/Oshibka-pri-zapuske-prilozheniya-0xc000007b-1.png" alt="Закрыть" class='sign-in-close'>
 			<p style="text-align: center;">Регистрация</p>
 			<form action="#" class='auth-form'>
-				<input type="text" name='userLogin' placeholder="Фамилия">
-				<input type="text" name='userLogin' placeholder="Имя">
-				<input type="text" name='userLogin' placeholder="Email">
+				<input type="text" name='userSurName' placeholder="Фамилия">
+				<input type="text" name='userName' placeholder="Имя">
+				<input type="text" name='userEmail' placeholder="Email">
 				<input type="text" name='userLogin' placeholder="Имя пользователя">
-				<input type="text" name='userLogin' placeholder="Пароль">
-				<input type="text" name='userLogin' placeholder="Логин Skype">
-				<input type="text" name='userLogin' placeholder="Страница Вконтакте">
-				<input type="text" name='userLogin' placeholder="Номер телефона">
+				<input type="text" name='userPassword' placeholder="Пароль">
+				<input type="text" name='userSkype' placeholder="Логин Skype">
+				<input type="text" name='userVk' placeholder="Страница Вконтакте">
+				<input type="text" name='userPhoneNumber' placeholder="Номер телефона">
 				<select name="country-select">
 					<option value="country">Выберите страну</option>
+					<option>Россия</option>
 				</select>
 				<select name="city-select">
 					<option value="city">Выберите город</option>
+					<option>Москва</option>
 				</select>
 				<p>Дата рождения</p>
-				<input type="date">
+				<input type="date" name="userBornDate">
 				<input type="submit" value="Зарегистрироваться" id="auth-form-register">
+				<p class="error-mess"></p>
 			</form>
 		</div>
 	</div>
