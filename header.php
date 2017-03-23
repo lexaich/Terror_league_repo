@@ -1,13 +1,22 @@
-﻿<div id="header">
+﻿<?php
+	
+	$query = 'select * from country_';
+	$result = $dbconnect->query($query);
+	if($_SESSION['userLogin']){
+		$userLogin = $_SESSION['userLogin'];
+		$userid = $_SESSION['userid'];
+	}
+
+?><div id="header">
 	<div class="inner-header">
-		<img id="logo" src="/images/logo.png" alt="лого">
+		<img id="logo" src="/images/logotypes/logo.png" alt="лого">
 
 		<div id="searchform">
 			<div class="links">
-				<a href="#"><img src="/images/vk.jpg" alt="VK"></a>
-				<a href="#"><img src="/images/twitch.jpg" alt="TWITCH"></a>
-				<a href="#"><img src="/images/youtube.jpg" alt="YOUTUBE"></a>
-				<a href="#"><img src="/images/twitter.jpg" alt="TWITTER"></a>
+				<a href="#"><img src="/images/social/vk.jpg" alt="VK"></a>
+				<a href="#"><img src="/images/social/twitch.jpg" alt="TWITCH"></a>
+				<a href="#"><img src="/images/social/youtube.jpg" alt="YOUTUBE"></a>
+				<a href="#"><img src="/images/social/twitter.jpg" alt="TWITTER"></a>
 			</div>
 			<div class="search">
 			<form action="#" id="search">
@@ -17,18 +26,18 @@
 		</div>
 		<nav class="nav">
 			<ul id="nav">
-				<li><a href="#">Главная</a></li>
+				<li><a href="http://terror-league.ru">Главная</a></li>
 				<li><a href="#">Лига</a></li> 
 				<li><a href="#">Стримы</a></li>
 				<li><a href="#">Новости</a></li>
-				<li><a href="#">Турниры</a></li>
+				<li><a href="http://terror-league.ru/tournaments/">Турниры</a></li>
 				<li><a href="#">Команды</a></li>
 				<li><a href="#">Медиа</a></li>
 				<li><?php 
 					if($userLogin){ 
-					echo '<a href="#" id="lk-button">'.$userLogin.'</a>';
+						echo '<a href="http://terror-league.ru/user/" id="lk-button">'.$userLogin.'</a>';
 					}else{
-					echo '<a href="#" id="signInButton">Войти</a>';
+						echo '<a href="#" id="signInButton">Войти</a>';
 					}
 					?></li>
 			</ul>
@@ -42,7 +51,7 @@
 				<p>Имя пользователя/E-mail</p>
 				<input type="text" name='userLogin'>
 				<p>Пароль</p>
-				<input type="text" name='userPassword'>
+				<input type="password" name='userPassword'>
 				<input type="submit" value="Войти" id="auth-form-submit">
 				<p><a href="#">Забыли пароль?</a>/<a href="#" id="register-init">Регистрация</a></p>
 				<p class="error-mess"></p>
@@ -56,17 +65,23 @@
 				<input type="text" name='userName' placeholder="Имя" style="border: 1px solid red">
 				<input type="text" name='userEmail' placeholder="Email" style="border: 1px solid red">
 				<input type="text" name='userLogin' placeholder="Имя пользователя" style="border: 1px solid red">
-				<input type="text" name='userPassword' placeholder="Пароль" style="border: 1px solid red">
+				<input type="password" name='userPassword' placeholder="Пароль" style="border: 1px solid red">
 				<input type="text" name='userSkype' placeholder="Логин Skype">
 				<input type="text" name='userVk' placeholder="Страница Вконтакте">
 				<input type="text" name='userPhoneNumber' placeholder="Номер телефона">
 				<select name="country-select">
-					<option value="country">Выберите страну</option>
-					<option>Россия</option>
+					<?php
+						echo "<option value='' disabled selected>Выберите страну</option>";
+						$numrow = $result->num_rows;
+						for($i = 0; $i < $numrow; $i ++){
+							$row = $result->fetch_assoc();
+							echo "<option>".$row['country_name_en']."</option>";
+						}
+
+					?>
 				</select>
+				<select name="region-select"></select>
 				<select name="city-select">
-					<option value="city">Выберите город</option>
-					<option>Москва</option>
 				</select>
 				<p>Дата рождения</p>
 				<input type="date" name="userBornDate">

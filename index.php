@@ -2,11 +2,6 @@
 	session_start();
 	header('Content-type: text/html; charset=utf-8');
 	require "php/dbdata.php";
-	@ $dbconnect = new mysqli($dbDataUser->host, $dbDataUser->login, $dbDataUser->password, $dbDataUser->database);
-	if(mysqli_connect_errno()){
-		echo "<p class='no-connect-db'>Не удалось подлючиться к базе данных. Повторите попытку позже.</p>".$dbDataUser->login.$dbDataUser->password;
-		exit;
-	}
 	$dbconnect->query('set names utf8');
 	$query = 'select * from news';
 	$result = $dbconnect->query($query);
@@ -18,10 +13,6 @@
 			array_push($news_array, $row);
 		}
 	}
-	if($_SESSION['userLogin']){
-		$userLogin = $_SESSION['userLogin'];
-		$userid = $_SESSION['userid'];
-	}
 ?>
 
 
@@ -30,13 +21,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="css/styles.css">
 	<link href="http://allfont.ru/allfont.css?fonts=roboto-condensed" rel="stylesheet" type="text/css" />
 	<meta charset="UTF-8">
 	<script src="/js/jquery.js"></script>
 	<script src="/js/index.js"></script>
 	<script src="/js/getXHR.js"></script>
-	<title>Terror</title>
+	<title>Terror-league</title>
 </head>
 <body>
 	<div class="wrapper">
@@ -44,7 +35,7 @@
 <? include '/header.php';?>
 
 <div id="banner">
-	<img src="/images/banner.jpg" alt="большой большой баннер турнира">
+	<img src="/images/banners/banner.jpg" alt="большой большой баннер турнира">
 </div>
 
 		<div class="contents">
