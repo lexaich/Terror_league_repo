@@ -21,6 +21,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="shortcut icon" href="favicon.ico" />
 	<link rel="stylesheet" href="css/styles.css">
 	<link href="http://allfont.ru/allfont.css?fonts=roboto-condensed" rel="stylesheet" type="text/css" />
 	<meta charset="UTF-8">
