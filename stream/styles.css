@@ -8,7 +8,9 @@ color:black;
 font-size: 20px;
 background-color: #F5F5F5;
 }
-
+div{
+  border:1px solid;
+}
 
 .clear:after {
      visibility: hidden;

@@ -6,7 +6,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 	<link rel="stylesheet" href="../css/styles.css">
+	<link rel="stylesheet" href="styles.css">
+	<link href="http://allfont.ru/allfont.css?fonts=roboto-condensed" rel="stylesheet" type="text/css" />
 	<meta charset="UTF-8">
 	<script src="../js/jquery.js"></script>
 	<script src="../js/index.js"></script>
@@ -17,8 +20,11 @@
 
 <div class="wrapper">
 <? include '../header.php' ;?>
+<div id="banner">
+	<img src="/images/banners/banner.jpg" alt="большой большой баннер турнира">
+</div>
 
-	<div class="clear">
+	<div class="clear" style="background-color: white;">
 		<div class="profile" style="width:200px; float:left;margin: 30px;">
 			<img src=<?php 
 
@@ -56,15 +62,43 @@
 			</div>
 		</div>
 
-		<div class="midside" style="float:left; background-color: white;">
-			<div class="info" style="width:840px; height: 150px; margin: 30px 40px 40px 40px;">
-				Информация об игроке с редактирование ее
+		<div class="mid_side" style="float:left; background-color: white;">
+			<div class="info" style="">
+    				Информация об игроке с редактирование ее
 			</div>
-			<div class="team" style="width: 400px; height: 350px; float:right;margin: 0px 40px 0px 0px;"> информация о составе команды в кторой он находится
+			<div class="team" style=""> 
+<div style="float:left; margin-right: 50px">
+<div><span style="font-size: 23px;color: brown;">Капитан команды</span></div>
+<div><span>Ник игрока -</span><span> Роль</span></div>
+</div>
+<img  src="#" alt="логотип" style="width:130px; height: 50px">
+<div class="clear"></div>
+     
+    <hr>
+<div>    
+<div><span>Ник игрока -</span><span> Роль</span></div>
+<div><span>Ник игрока -</span><span> Роль</span></div>
+<div><span>Ник игрока -</span><span> Роль</span></div>
+<div><span>Ник игрока -</span><span> Роль</span></div>
+</div>
+    <hr>
+<div>
+<div><span>Запасные</span></div>
+<div><span>Ник игрока -</span><span> Роль</span></div>
+<div><span>Ник игрока -</span><span> Роль</span></div>
+</div>
 				
 			</div>
-			<div class="tornament" style="width: 400px; height: 350px;margin: 0px 0px 10px 40px;">
-				Информация о текущем турнире в ктором учавствует команда
+			<div class="tornament" style="">
+	<span>Название турнира</span>
+	<div><span>Команда слева</span> <span>VS</span> <span>Команда справа</span></div>
+	<div><span>Команда слева</span> <span>VS</span> <span>Команда справа</span></div>
+	<div><span>Команда слева</span> <span>VS</span> <span>Команда справа</span></div>
+	<div><span>Команда слева</span> <span>VS</span> <span>Команда справа</span></div>
+	<div><span>Команда слева</span> <span>VS</span> <span>Команда справа</span></div>
+	<span style="">Статус турнира</span>
+
+
 			</div>	
 			</div>
 </div>

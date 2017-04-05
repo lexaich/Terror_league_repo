@@ -27,7 +27,7 @@
 					echo $this->login;
 					exit;
 				}else{
-					echo 1;
+					echo 'failed login';
 					exit;
 				}
 			}
